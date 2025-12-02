@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:84bd5cc5c28c28d91166620a706ee06f0b12c556b89aa9e250ad244933bd9189
-size 225
+
+layout(location = 0) in vec3 position;
+layout(location = 1) in uint objectId;
+
+out uint _objectId;
+
+void main()
+{
+    gl_Position = (g_perLayer.m_proj * g_perLayer.m_view ) * vec4(position, 1.0); 
+	_objectId = objectId;
+		
+}

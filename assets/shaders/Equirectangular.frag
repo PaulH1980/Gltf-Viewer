@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f92ae4d0e7b64d3d121b578d749043efc580625bdfe60aea5aa418a7cb113a9b
-size 206
+uniform sampler2D tex;
+in vec3  _pos;
+out vec4 _colorOut;
+
+void main() {
+
+	vec2 uv    = SampleSphericalMap(normalize(_pos) * -1.0);
+    vec3 color = texture(tex, uv).rgb;
+	_colorOut  = vec4( color, 1.0 );
+}

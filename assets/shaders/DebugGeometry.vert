@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:02ac35e3575a06b0c6b9892e7dcb918e4225cf3908e5b49230513a553386a94b
-size 300
+
+layout(location = 0) in vec3 position;
+layout(location = 1) in vec3 normal;
+layout(location = 2) in vec2 texCoord;
+
+
+out vec2 _texCoord;
+out vec3 _normal;
+
+void main()
+{
+    gl_Position = (g_perLayer.m_proj * g_perLayer.m_view) * vec4(position, 1.0);    
+	_texCoord = texCoord;
+	_normal  = normal;
+}

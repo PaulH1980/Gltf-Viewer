@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0b9b5f49c2237c9df017ccd1e2a283863bf778082a13aebb76494666ceff303f
-size 183
+
+layout(location = 0) in vec3 position;
+layout(location = 1) in vec2 texCoord;
+
+
+out vec2 _texCoord;
+
+void main()
+{
+    gl_Position = vec4(position, 1.0);    
+	_texCoord = texCoord;
+}

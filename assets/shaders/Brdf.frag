@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b2b83902fcf3fb55aabd8ee285306a979e4cdf80cac42d3dd8ef6ed7b78bd092
-size 169
+
+in vec2 _texCoord;
+out vec4 _colorOut;
+
+void main() {
+	vec2 integratedBRDF = IntegrateBRDF(_texCoord.x, _texCoord.y);
+    _colorOut = vec4(integratedBRDF, 0.0, 1.0 );
+}

@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:be5bb4d952afdef780f33621c2a39c98409adde92086ab4138def9f098da70be
-size 268
+
+layout (location = 0) in vec3 position;
+
+out vec3 _texCoord;
+
+void main()
+{
+    
+    vec4 pos = g_perLayer.m_proj * g_perLayer.m_skyView * vec4(position, 1.0);
+    gl_Position = pos.xyww; //https://learnopengl.com/Advanced-OpenGL/Cubemaps
+    _texCoord = position;
+};

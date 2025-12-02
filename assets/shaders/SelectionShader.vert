@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:70398174274b0755677580f20e8d4d4007624ac792295a1130fcb3346cfa61ac
-size 296
+uniform mat4 model;
+
+
+layout(location = 0) in vec3 position;
+layout(location = 1) in vec3 normal;
+layout(location = 2) in vec3 tangent;
+layout(location = 3) in vec2 uv;
+
+
+void main()
+{
+    vec4 pos = model * vec4(position, 1.0);
+	gl_Position = (g_perLayer.m_proj * g_perLayer.m_view ) * pos;   
+}

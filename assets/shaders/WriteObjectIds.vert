@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:94ae793a64f50941733bd0c08377f0ba91521a8c741beddd7b59403cc05448c3
-size 166
+uniform mat4 model;
+layout(location = 0) in vec3 position;
+
+void main()
+{
+    gl_Position = (g_perLayer.m_proj * g_perLayer.m_view * model) * vec4(position, 1.0);  
+}

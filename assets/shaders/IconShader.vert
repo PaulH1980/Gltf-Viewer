@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d7493fe26cc1408d52122f05bac1186aa97e96cae098e95c3fa639c77b30b353
-size 204
+
+layout(location = 0) in vec3 position;
+layout(location = 1) in vec2 uv;
+out vec2 _uvOut;
+void main()
+{
+    gl_Position = (g_perLayer.m_proj * g_perLayer.m_view ) * vec4(position, 1.0);  
+	_uvOut = uv;	
+}

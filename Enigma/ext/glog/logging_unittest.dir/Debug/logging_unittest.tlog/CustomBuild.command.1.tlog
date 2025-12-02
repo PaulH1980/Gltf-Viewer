@@ -1,0 +1,10 @@
+^C:\PBRT-V3-MASTER\PBRT-V3\SRC\EXT\GLOG\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/pbrt-v3-master/pbrt-v3 -BC:/pbrt-v3-master/pbrt-cmake --check-stamp-file C:/pbrt-v3-master/pbrt-cmake/src/ext/glog/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

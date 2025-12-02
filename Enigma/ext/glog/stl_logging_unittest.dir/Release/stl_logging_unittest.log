@@ -1,0 +1,5 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2066,5): warning : The referenced project 'C:\pbrt-v3-master\pbrt-cmake\ZERO_CHECK.vcxproj' does not exist.
+C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2066,5): warning : The referenced project 'C:\pbrt-v3-master\pbrt-cmake\src\ext\glog\glog.vcxproj' does not exist.
+  Building Custom Rule C:/pbrt-v3-master/pbrt-v3/src/ext/glog/CMakeLists.txt
+  The system cannot find the path specified.
+C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(241,5): error MSB8066: Custom build for 'C:\pbrt-v3-master\pbrt-v3\src\ext\glog\CMakeLists.txt' exited with code 3.

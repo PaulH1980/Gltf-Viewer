@@ -1,0 +1,6 @@
+# Xcode
+.DS_Store
+.vs
+/Enigma/x64/
+
+x64/Debug/Enigma.pdb
